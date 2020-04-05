@@ -9,7 +9,7 @@ This repo contains scripts for parsing gtex data
 - First line: #1.2
 - Second line: 56200   17382
 - Third line: header, starting with Name (transcript name), Description (gene name), and then sample ID
-- Rmoving the first two lines:
+- Removing the first two lines:
   ```
   tail -n +3 GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm.gct > GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm_clean.gct
   ```
