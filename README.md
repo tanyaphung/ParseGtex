@@ -22,20 +22,25 @@ This repo contains scripts for parsing gtex data
   python subset_tpm.py -h
   usage: subset_tpm.py [-h] --tpm_gct_file TPM_GCT_FILE --sample_list_file
                      SAMPLE_LIST_FILE --output_file OUTPUT_FILE
+                     --output_missing_samples OUTPUT_MISSING_SAMPLES
 
   Subset tpm gct file for a subset of samples.
 
   optional arguments:
-  -h, --help            show this help message and exit
-  --tpm_gct_file TPM_GCT_FILE
+    -h, --help            show this help message and exit
+    --tpm_gct_file TPM_GCT_FILE
                         Input the path to the tpm gct file (unzip).
-  --sample_list_file SAMPLE_LIST_FILE
+    --sample_list_file SAMPLE_LIST_FILE
                         Input the path to the list of samples. Each sample is
                         a line.
-  --output_file OUTPUT_FILE
+    --output_file OUTPUT_FILE
                         Input the path to the output file.
+    --output_missing_samples OUTPUT_MISSING_SAMPLES
+                        Input the path to the output file that lists the
+                        missing samples.
   ```
  - This is how one would run this script:
   ```
-  python subset_tpm.py --tpm_gct_file GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm_clean.gct --sample_list_file test_sample.txt --output_file test_sample_tpm.tsv
+  python subset_tpm.py --tpm_gct_file GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm_clean.gct --sample_list_file WB-trimmed.txt --output_file WB_tpm.tsv --output_missing_samples WB_missing_samples.txt
   ```
+ - **Note:** because there are missing data in the tpm file (in other words, for example, you have a list of sample ids for whole blood, but not all of these sample ids are present in the tpm file). The script `subset_tpm.py` first checks whether the sample id exists in the tpm file. It also outputs a list of sample ids that are missing in the tpm file. 
