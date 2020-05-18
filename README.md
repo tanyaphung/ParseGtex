@@ -1,6 +1,25 @@
 # gtex
 This repo contains scripts for parsing gtex data
 
+## Tabulate samples
+- `wget https://storage.googleapis.com/gtex_analysis_v8/annotations/GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt`
+- From the file `GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt`, generate a config file with the following information:
+  + all tissue names
+  + sample ids for each of the tissue
+  + sample ids for each of the tissue for males
+  + sample ids for each of the tissue for females
+  + sample ids for each of the tissue where the sample is present in the TPM file
+  + sample ids for each of the tissue for males where the sample is present in the TPM file
+  + sample ids for each of the tissue for females where the sample is present in the TPM file
+- Generate a spreadsheet for the counts as well
+1. Download the file `GTEx Portal.csv` file from `https://gtexportal.org/home/tissueSummaryPage` (under V8 Sample Counts by Tissues)
+2. Generate a config file with all of the tissue names:
+  ```
+  python obtain_tissues_list.py
+  ```
+  - This script outputs the file `gtex_version8_config.json`. We will be adding to this config file
+3. Find sample ids for each of the tissue
+
 ## Parse .gct file
 - Parsing .gct tmp file from gtex (https://storage.googleapis.com/gtex_analysis_v8/rna_seq_data/GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm.gct.gz)
 - Download: `wget https://storage.googleapis.com/gtex_analysis_v8/rna_seq_data/GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm.gct.gz`
