@@ -76,6 +76,6 @@ This repo contains scripts for parsing gtex data
   ```
   python subset_tpm.py --tpm_gct_file GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm_clean.gct --sample_id GTEX-11DXY-0526-SM-5EGGQ --output_file GTEX-11DXY-0526-SM-5EGGQ_tpm.tsv
   ```
-    + Note that currently, for the option of subsetting just 1 sample, this script does not handle the case where the sample is not found in the TPM file. It would just return an error when running the script. 
+   + Note that currently, for the option of subsetting just 1 sample, this script does not handle the case where the sample is not found in the TPM file. It would just return an error when running the script. 
   
 
