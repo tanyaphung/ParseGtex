@@ -17,8 +17,9 @@ This repo contains scripts for parsing gtex data
   ```
   python obtain_tissues_list.py
   ```
-  - This script outputs the file `gtex_version8_config.json`. We will be adding to this config file
+  - This script outputs the file `gtex_version8_config.json`.
 3. Find sample ids for each of the tissue
+- Use Python script `find_sample_ids_for_each_tissue.py`
 
 ## Parse .gct file
 - Parsing .gct tmp file from gtex (https://storage.googleapis.com/gtex_analysis_v8/rna_seq_data/GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm.gct.gz)
