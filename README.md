@@ -3,8 +3,7 @@ This repo contains scripts for parsing gtex data
 
 ## Tabulate samples
 - `wget https://storage.googleapis.com/gtex_analysis_v8/annotations/GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt`
-- From the file `GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt`, generate a config file with the following information:
-  + all tissue names
+- From the file `GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt`, generate a config file for each tissue with the following information:
   + sample ids for each of the tissue
   + sample ids for each of the tissue for males
   + sample ids for each of the tissue for females
@@ -17,7 +16,7 @@ This repo contains scripts for parsing gtex data
   ```
   python obtain_tissues_list.py
   ```
-  - This script outputs the file `gtex_version8_config.json`.
+  - This script outputs the file `gtex_version8_config.json`. This lists all tissues from GTEX.
 3. Find sample ids for each of the tissue
 - Use Python script `find_sample_ids_for_each_tissue.py`
   - Rule `find_sample_ids_for_each_tissue` (lines 10-20 of `snakefile_find_sample_ids_for_each_tissue.snakefile`)
