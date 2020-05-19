@@ -21,6 +21,7 @@ This repo contains scripts for parsing gtex data
 3. Find sample ids for each of the tissue
 - Use Python script `find_sample_ids_for_each_tissue.py`
   - Rule `find_sample_ids_for_each_tissue` (lines 10-20 of `snakefile_find_sample_ids_for_each_tissue.snakefile`)
+- Return `{tissue}_gtex_version8_config.json` and a file called `number_of_samples.csv` tabulating the number of samples in each category
 
 ## Parse .gct file
 - Parsing .gct tmp file from gtex (https://storage.googleapis.com/gtex_analysis_v8/rna_seq_data/GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm.gct.gz)
